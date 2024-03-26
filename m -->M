@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>m --> M</title>
+</head>
+<body>
+    <label for="texto">Mande qualquer abobrinha</label>
+    <input type="text" id="texto" oninput="mtoM()">
+    <br><br>
+    <label for="resultado">ABOBRINHA só que em MAIUSCULO:</label>
+    <input type="text" id="resultado" readonly>
+ 
+    <script>
+        function mtoM() {
+            let texto = document.getElementById('texto').value;
+            let textoMaiusculo = texto.toUpperCase();
+            document.getElementById('resultado').value = textoMaiusculo;
+        }
+    </script>
+</body>
+</html>
