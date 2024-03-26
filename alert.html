@@ -7,12 +7,17 @@
     </head>
     <body>
         <script>
+            //aparece o alert ao entrar na página//
             window.alert("Arêrere, o Santos tá jogando a série B!! ")
         </script>
-        <button onclick="myFunction()">Ver Denovo?</button>
+        <!--botão que ao clicar, mostra o alert denovo, junto do id, que define a frase de tudo aquilo que tiver o mesmo id -->
+        <button id="santos" onclick="myFunction()">Ver Denovo?</button>
 
         <script>
+        //recebe o id e manda a frase definida a tudo que conter o id
+        document.getElementById("santos").innerHTML = "Você sabe o resultado final?";
         function myFunction() {
+        //alert com o clique do botão
         alert("Arêrere, o Santos tá jogando a série B!! ");
         }
         </script>
