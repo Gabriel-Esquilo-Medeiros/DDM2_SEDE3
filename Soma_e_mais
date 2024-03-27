@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somas/Cálculos</title>
-</head>
-<body>
-    <label for="numeros">Insira um número, uma vírgula para separar, e outro número:</label>
-    <input type="text" id="numeros" oninput="calcularOperacoes()">
-    <br><br>
- 
-    <div id="resultados">
-            <label>Soma:<span id="soma"></span>
-            <label>Subtração:<span id="subtracao"></span>
-            <label>Multiplicação:<span id="multiplicacao"></span>
-            <label>Divisão:<span id="divisao"></span>
-            <label>Potenciação:<span id="potenciacao"></span>
-    </div>
- 
-    <script>
-        function calcularOperacoes() {
-            let numeros = document.getElementById('numeros').value.split(',').map(Number);
-            
-            let soma = numeros.reduce((acc, cur) => acc + cur, 0);
-            document.getElementById('soma').textContent = soma;
- 
-            let subtracao = numeros.reduce((acc, cur) => acc - cur);
-            document.getElementById('subtracao').textContent = subtracao;
- 
-            let multiplicacao = numeros.reduce((acc, cur) => acc * cur, 1);
-            document.getElementById('multiplicacao').textContent = multiplicacao;
- 
-            let divisao = numeros.reduce((acc, cur) => acc / cur);
-            document.getElementById('divisao').textContent = divisao;
- 
-            let potenciacao = numeros.reduce((acc, cur) => Math.pow(acc, cur));
-            document.getElementById('potenciacao').textContent = potenciacao;
-        }
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Somas/Cálculos</title>
+    </head>
+    <body>
+        <label for="numeros">Insira um número, uma vírgula para separar, e outro número:</label>
+        <input type="text" id="numeros" oninput="calcularOperacoes()">
+        <br><br>
+     
+        <div id="resultados">
+                <label>Soma:<span id="soma"></span>
+                <label>Subtração:<span id="subtracao"></span>
+                <label>Multiplicação:<span id="multiplicacao"></span>
+                <label>Divisão:<span id="divisao"></span>
+                <label>Potenciação:<span id="potenciacao"></span>
+        </div>
+     
+        <script>
+            function calcularOperacoes() {
+                let numeros = document.getElementById('numeros').value.split(',').map(Number);
+                
+                let soma = numeros.reduce((acc, cur) => acc + cur, 0);
+                document.getElementById('soma').textContent = soma;
+     
+                let subtracao = numeros.reduce((acc, cur) => acc - cur);
+                document.getElementById('subtracao').textContent = subtracao;
+     
+                let multiplicacao = numeros.reduce((acc, cur) => acc * cur, 1);
+                document.getElementById('multiplicacao').textContent = multiplicacao;
+     
+                let divisao = numeros.reduce((acc, cur) => acc / cur);
+                document.getElementById('divisao').textContent = divisao;
+     
+                let potenciacao = numeros.reduce((acc, cur) => Math.pow(acc, cur));
+                document.getElementById('potenciacao').textContent = potenciacao;
+            }
+        </script>
+    </body>
 </html>
