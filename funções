@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <script>
+        // a função nomeada é só uma função com um nome que você dá a ela
+        function funcaoNomeada() {
+            console.log("Na mão a nomeada");
+        }
+ 
+        //a função com argunento, ou parametro, é a função que você dá um valor e pode pedir que retorne um resultado
+        function soma(x, y) {
+            return x + y;
+        }
+ 
+        //a função com construção, permite que você passe um valor, como no exemplo, e encaixe ele numa outra função
+        function FuncaoConstrutora(nome) {
+            this.nome = nome;
+            this.apresentarNome = function() {
+                console.log("Olá, eu sou " + this.nome);
+            };
+        }
+ 
+        //a função literal, ou variavel, é a função que permite você colocar variaveis, sim que surpresa
+        let funcaoLiteral = function() {
+            console.log("Aqui, literalmente uma função literal");
+        };
+ 
+        //com a função flecha você pode passar um valor, e pegar o resultado mais rápido, sem, por exemplo, o return
+        let multiplicacao = (a, b) => a * b;
+    </script>
+</body>
+</html>
