@@ -6,30 +6,30 @@
     <title>".documentGetElementBy"</title>
 </head>
 <body>
-    <div id="exemploID">Primeiro, ID</div>
-    <div class="exemploclass">Segundo, ClassName</div>
-    <div class="exemplotag">Terceiro, ClassTagName</div>
+    <div getById("exemploID")>Primeiro, ID</div>
+    <div querrySelector.("exemploclass")>Segundo, ClassName</div>
+    <div querrySelector.("exemplotag")>Terceiro, ClassTagName</div>
  
     <script>
         //Pega aquilo que estiver com o id inserido
-        let exemploID = document.getElementById("meuElemento");
-        console.log("Elemento ID:", exemploID);
+        exemploID = document.getElementById("exemploID");
+        exemploID.innerText("Elemento ID:", exemploID);
  
         //Pega aquilo que estiver com a tag inserida
-        let exemploTag = document.getElementsByTagName("div");
-        console.log("Elementos por Tag Name:", exemploTag);
+        exemploTag = document.getElementsByTagName("div");
+        exemploID.innerText("Elementos por Tag Name:", exemploTag);
  
         //Pega aquilo que estiver com a classe nome inserida
-        let elementosClasse = document.getElementsByClassName("exemploclass");
-        console.log("Elementos por Classe:", elementosClasse);
+        elementosClasse = document.getElementsByClassName("exemploclass");
+        elementosClasse.innerText("Elementos por Classe:", elementosClasse);
  
         //O primeiro elemento que vier com a classe do CSS é selecionado 
-        let primeiroexemplo = document.querySelector("#meuElemento");
-        console.log("Query Selector e exemplo:", primeiroexemplo);
+        primeiroexemplo = document.querySelector("#meuElemento");
+        primeiroexemplo.innerText("Query Selector e exemplo:", primeiroexemplo);
  
         // Os elementos que vierem com a classe do CSS são selecionados
-        let todos = document.querySelectorAll(".minhaClasse");
-        console.log("Query Selector porém com todos os exemplos:", todos);
+        todos = document.querySelectorAll(".minhaClasse");
+        todos.innerText("Query Selector porém com todos os exemplos:", todos);
     </script>
 </body>
 </html>
